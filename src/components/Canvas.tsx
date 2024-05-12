@@ -19,10 +19,11 @@ let camera = new THREE.PerspectiveCamera(
   1,
   3000
 );
-camera.position.set(10, 0.15, 10);
-let cameraTarget = new THREE.Vector3(1, 1, 1);
+camera.position.set(10, 0.1, 10);
+let cameraTarget = new THREE.Vector3();
 
-const _controls = new OrbitControls(camera, renderer.domElement);
+new OrbitControls(camera, renderer.domElement);
+
 const loader = new PLYLoader();
 
 const material = new THREE.PointsMaterial({
